@@ -1,0 +1,53 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+<!-- Contenido principal -->
+<div class="container">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <h2 class="display-4">Creditos</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptate animi nesciunt iste modi assumenda! Velit obcaecati maiores, 
+            et iusto deserunt, sequi perspiciatis optio tempora accusamus ad in excepturi?</p>
+        <hr class="my-4">
+        </div>
+    </div>
+    
+    <div class="card-group">
+        <div class="card mb-3" style="max-width: 50%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/portrait-alex.png') }}" class="img-fluid rounded-start" alt="Avatar">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Alex Arismendi</h5>
+                  <h6 class="card-subtitle">Artista</h6>
+                  <p class="card-text">Estudiante de Ilustración del Instituto de Diseño de Caracas. Ilustradora del banner utilizado en la página principal.</p>
+                  <a href="https://www.instagram.com/catcrybby/" class="btn btn-primary">Instagram</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 50%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/portrait-luna.png') }}" class="img-fluid rounded-start" alt="Avatar">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Fabiana Rodríguez</h5>
+                  <h6 class="card-subtitle">Programadora</h6>
+                  <p class="card-text">Estudiante de Ingeniería Informática de la Universidad Nacional de las Telecomunicaciones e Informática.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+{% endblock%}

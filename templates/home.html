@@ -1,0 +1,81 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+    <!--Banner-->
+    <header class="container-fluid p-0">
+        <img src="{{ url_for('static', filename='images/banner-extended.png') }}" class="img-fluid w-100" alt="Banner">
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!--Apartado de Bienvenida-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            <h1 class="display-4">Bienvenido al Blog del Ratón Lúdico!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate animi nesciunt iste modi assumenda! Velit obcaecati maiores, 
+                et iusto deserunt, sequi perspiciatis optio tempora accusamus ad in excepturi?</p>
+            <hr class="my-4">
+            </div>
+        </div>
+        
+        <!--Apartado de Resenas e Imagenes-->
+        <h1 class="section-tittle">Videojuegos de Aventura</h1>
+        <div class="card-group">
+            <div class="card">
+              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/504230/capsule_616x353.jpg?t=1714089525" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">Celestle</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam sit quos.</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 3 minutos</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420530/capsule_616x353.jpg?t=1729475523" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">One Shot</h5>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reprehenderit beatae exercitationem?</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 2 dias</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/356570/capsule_616x353.jpg?t=1739395561" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">Party Hard</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae animi beatae!</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 10 dias</small></p>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="section-tittle">Videojuegos de Terror</h1>
+          <div class="card-group">
+            <div class="card">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/483980/capsule_616x353.jpg?t=1735191803" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">Mad Father</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellat modi provident eaque? Ab perferendis excepturi rem deserunt.</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 1 día</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="{{ url_for('static', filename='images/capsule_616x353.png') }}" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">Cry of Fear</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi id facere officiis cum magni? Doloremque ratione dicta explicabo ut pariatur?</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 4 dias</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="{{ url_for('static', filename='images/chNNMrc0bScjiatvH1m3t-DjVlbtNiW7.png') }}" class="card-img-top" alt="GameCover">
+              <div class="card-body">
+                <h5 class="card-title">Slay The Princess | The Pristine Cut</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus odio ratione adipisci expedita architecto consectetur.</p>
+                <p class="card-text"><small class="text-body-secondary" style="color: #ffffff !important;">Actualizado hace 15 dias</small></p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+{% endblock%}

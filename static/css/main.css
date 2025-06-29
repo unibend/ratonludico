@@ -1,0 +1,51 @@
+body {
+    background: #170023;
+}
+
+    /* Pagina Principal*/
+/* Apartado de Bienvenida */
+.jumbotron {
+    margin: 0;
+    padding: 10px;
+    background-color: #170023;
+}
+
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron p {
+    margin: 10px 0;
+    font-family: sans-serif; 
+    color: #ffffff;
+}
+
+.lead {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Linea horizontal */
+.my-4 {
+    margin: 5px 0 !important;
+    color: #ffffff;
+}
+
+.container {
+    padding: 0;
+}
+
+/* Titulos de apartados */
+.section-tittle {
+    color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+/* Apartados */
+.card {
+    color: #ffffff;
+    background-color: #0e0e0e;
+}
+
+.card-subtitle {
+    color: #a1a1a1 !important;
+}
