@@ -60,6 +60,10 @@ def delete(id):
     db.session.commit()
     return redirect(url_for('index'))
 
+@app.route('/clair-obscur')
+def clair_obscur():
+    return render_template('clair-obscur.html')
+
 @app.route('/credits')
 def credits():
     return render_template('credits.html')

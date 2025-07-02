@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Banner del juego -->
+<header class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/clair-obscur-banner.jpg') }}" class="img-fluid w-100" alt="Clair Obscur Expedition 33">
+</header>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+    <!-- Encabezado -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Clair Obscur: Expedition 33</h1>
+            <p class="lead">Un RPG por turnos que reinventa el género con su innovador sistema de combate</p>
+            <hr class="my-4">
+            <div class="d-flex align-items-center">
+                <span class="badge bg-purple me-2">RPG</span>
+                <span class="badge bg-purple me-2">Por turnos</span>
+                <span class="badge bg-purple">Estratégico</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de reseña -->
+    <article class="review-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="section-tittle">Reseña</h2>
+                
+                <div class="review-section mb-5">
+                    <h3>Una premisa fascinante</h3>
+                    <p>En un mundo donde la Pintora controla el destino de la humanidad a través de su arte, cada año marca un número en un mural que determina qué edad alcanzarán los habitantes. La Expedición 33 es la última esperanza para romper este ciclo opresivo.</p>
+                    <img src="{{ url_for('static', filename='images/clair-obscur-gameplay1.jpg') }}" class="img-fluid rounded my-3" alt="Gameplay 1">
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Combate innovador</h3>
+                    <p>El sistema de combate mezcla lo mejor de los RPG tradicionales con mecánicas modernas. El "Rayo de Luz" añade un elemento de tiempo real que mantiene la tensión en cada encuentro.</p>
+                    <div class="game-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Rayo de Luz</h4>
+                            <p>Mecánica que premia la rapidez de decisión</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chess"></i>
+                            <h4>Estrategia profunda</h4>
+                            <p>Posicionamiento y gestión de recursos clave</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Arte y banda sonora</h3>
+                    <p>El estilo artístico único combina elementos del art nouveau con diseños de personajes memorables. La banda sonora, compuesta por Olivier Derivière, eleva la experiencia a otro nivel con sus melodías emotivas y orquestaciones ricas.</p>
+                    <img src="{{ url_for('static', filename='images/clair-obscur-art.jpg') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Puntos fuertes</h4>
+                        <ul>
+                            <li>Sistema de combate innovador</li>
+                            <li>Historia profunda y personajes memorables</li>
+                            <li>Arte y música excepcionales</li>
+                            <li>Banda sonora cautivadora</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Puntos débiles</h4>
+                        <ul>
+                            <li>Curva de aprendizaje algo pronunciada</li>
+                            <li>Algunos combates pueden ser largos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar con información del juego -->
+            <div class="col-md-4">
+                <div class="game-info-card">
+                    <img src="{{ url_for('static', filename='images/clair-obscur-cover.jpg') }}" class="img-fluid rounded-top" alt="Portada">
+                    <div class="game-info-body">
+                        <h3>Información del Juego</h3>
+                        <div class="info-item">
+                            <span class="info-label">Desarrollador:</span>
+                            <span class="info-value">Sandfall Interactive</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Género:</span>
+                            <span class="info-value">RPG por turnos</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Plataformas:</span>
+                            <span class="info-value">PC, PS5, Xbox Series</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lanzamiento:</span>
+                            <span class="info-value">2024</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="score">4.5/5</span>
+                        </div>
+
+<div class="soundtrack-player mt-4">
+                            <h4><i class="fas fa-music"></i> Banda Sonora</h4>
+                            <div class="player-container">
+                                <audio id="gameSoundtrack" controls>
+                                    <source src="{{ url_for('static', filename='audio/main-theme.mp3') }}" type="audio/mpeg">
+                                    <source src="{{ url_for('static', filename='audio/main-theme.ogg') }}" type="audio/ogg">
+                                    Tu navegador no soporta el elemento de audio.
+                                </audio>
+                                <div class="track-list mt-3">
+                                    <div class="track active" data-track-src="{{ url_for('static', filename='audio/main-theme.mp3') }}">
+                                        <span class="track-number">1</span>
+                                        <span class="track-title">Lumiere</span>
+                                        <span class="track-duration">3:42</span>
+                                    </div>
+                                    <div class="track" data-track-src="{{ url_for('static', filename='audio/une-vie-a-taimer.mp3') }}">
+                                        <span class="track-number">2</span>
+                                        <span class="track-title">Une vie à t'aimer</span>
+                                        <span class="track-duration">11:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-primary btn-block mt-3">Ver tráiler</a>
+                        <a href="#" class="btn btn-outline-primary btn-block">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Script del reproductor -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.getElementById('gameSoundtrack');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Configuración inicial
+    audioPlayer.src = document.querySelector('.track.active').dataset.trackSrc;
+    
+    // Cambiar canción al hacer clic
+    tracks.forEach(track => {
+        track.addEventListener('click', function() {
+            // Remover clase active de todas las pistas
+            tracks.forEach(t => t.classList.remove('active'));
+            
+            // Añadir clase active a la pista seleccionada
+            this.classList.add('active');
+            
+            // Cambiar la fuente de audio
+            const newTrackSrc = this.dataset.trackSrc;
+            if (audioPlayer.src !== newTrackSrc) {
+                audioPlayer.src = newTrackSrc;
+                audioPlayer.currentTime = 0;
+            }
+            
+            // Reproducir automáticamente (con manejo de errores)
+            audioPlayer.play().catch(e => {
+                console.log("Error de reproducción:", e);
+                // Muestra un botón de play si falla la reproducción automática
+                const playBtn = document.createElement('button');
+                playBtn.className = 'btn btn-sm btn-primary mt-2';
+                playBtn.innerHTML = '<i class="fas fa-play"></i> Reproducir';
+                playBtn.onclick = () => audioPlayer.play();
+                this.appendChild(playBtn);
+            });
+        });
+    });
+    
+    // Manejar el fin de la reproducción
+    audioPlayer.addEventListener('ended', function() {
+        const currentActive = document.querySelector('.track.active');
+        const nextTrack = currentActive.nextElementSibling || tracks[0];
+        
+        currentActive.classList.remove('active');
+        nextTrack.classList.add('active');
+        audioPlayer.src = nextTrack.dataset.trackSrc;
+        audioPlayer.play();
+    });
+    
+    // Solución para políticas de autoplay (requiere interacción del usuario)
+    document.addEventListener('click', function initAudio() {
+        // Solo necesita ejecutarse una vez
+        document.removeEventListener('click', initAudio);
+        
+        // Precarga el audio
+        audioPlayer.volume = 0;
+        audioPlayer.play().then(() => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            audioPlayer.volume = 1;
+        }).catch(e => console.log("Precarga de audio:", e));
+    }, { once: true });
+});
+</script>
+
+{% endblock %}
