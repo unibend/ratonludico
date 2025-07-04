@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Banner del juego -->
+<header class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/Slay_The_Princess/banner.png') }}" class="img-fluid w-100" alt="Cry_Of_Fear">
+</header>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+    <!-- Encabezado -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Slay The Princess | The Pristine Cut</h1>
+            <p class="lead">Novela visual de terror psicológico donde debes decidir si matar o salvar a una princesa atrapada, 
+                enfrentando múltiples finales y dilemas morales.</p>
+            <hr class="my-4">
+            <div class="d-flex align-items-center">
+                <span class="badge bg-purple me-2">Novela Visual</span>
+                <span class="badge bg-purple me-2">Terror Psicológico</span>
+                <span class="badge bg-purple">Aventura Narrativa</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de reseña -->
+    <article class="review-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="section-tittle">Reseña</h2>
+                <div class="review-section mb-5">
+                    <h3>Una inquietante experiencia narrativa que desafía tus decisiones y percepciones</h3>
+                    <p>Encerrada en una cabaña, la princesa es tanto adversaria como posible aliada. El jugador debe decidir su destino mientras explora una narrativa ramificada y en bucle, 
+                        influenciada por elecciones que alteran la historia, la apariencia de la princesa y el entorno.</p>
+                  <img src="{{ url_for('static', filename='images//Slay_The_Princess/gameplay.png') }}" class="img-fluid rounded my-3 d-block mx-auto" alt="Gameplay">
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Narrativa ramificada y decisiones morales</h3>
+                    <p>El juego avanza mediante elecciones de diálogo y acciones que afectan la personalidad de la princesa, 
+                        la historia y el diseño visual, creando múltiples ciclos y finales que reflejan las decisiones del jugador.</p>
+                    <div class="game-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Ciclos narrativos en bucle</h4>
+                            <p>Repetición de capítulos con variaciones según elecciones previas</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chess"></i>
+                            <h4>Interacción con voces y narrador</h4>
+                            <p>Influencia y manipulación a través de personajes que comentan y afectan decisiones</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Arte y banda sonora</h3>
+                    <p>Slay the Princess presenta ilustraciones dibujadas a mano con un estilo oscuro y atmosférico que cambia según la evolución de la historia y la princesa. 
+                        Los escenarios detallados y el diseño visual refuerzan la tensión y el horror psicológico.<br><br>La banda sonora complementa la atmósfera con música 
+                        inquietante y efectos sonoros que aumentan la sensación de misterio y ansiedad. Las actuaciones de voz, incluyendo un narrador omnisciente 
+                        y personajes con voces distintas, enriquecen la inmersión y la narrativa dinámica, haciendo que cada partida se sienta única y perturbadora.</p>
+                    <img src="{{ url_for('static', filename='images//Slay_The_Princess/art.png') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Puntos fuertes</h4>
+                        <ul>
+                            <li>Narrativa profunda y altamente ramificada</li>
+                            <li>Gran rejugabilidad con múltiples finales</li>
+                            <li>Arte y diseño visual muy cuidados y expresivos</li>
+                            <li>Banda sonora y actuaciones de voz que elevan la experiencia</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Puntos débiles</h4>
+                        <ul>
+                            <li>Requiere paciencia para explorar todas las ramas narrativas</li>
+                            <li>Algunas decisiones pueden sentirse ambiguas o frustrantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar con información del juego -->
+            <div class="col-md-4">
+                <div class="game-info-card">
+                    <img src="{{ url_for('static', filename='images//Slay_The_Princess/cover.png') }}" class="img-fluid rounded-top" alt="Portada">
+                    <div class="game-info-body">
+                        <h3>Información del Juego</h3>
+                        <div class="info-item">
+                            <span class="info-label">Desarrollador:</span>
+                            <span class="info-value">Black Tabby Games</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Género:</span>
+                            <span class="info-value">Novela visual de terror</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Plataformas:</span>
+                            <span class="info-value">PC, Steam Deck</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lanzamiento:</span>
+                            <span class="info-value">2023</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="score">4/5</span>
+                        </div>
+
+<div class="soundtrack-player mt-4">
+                            <h4><i class="fas fa-music"></i> Banda Sonora</h4>
+                            <div class="player-container">
+                                <audio id="gameSoundtrack" controls autoplay>
+                                    <source src="{{ url_for('static', filename='audio/The Eye of the Needle.mp3') }}" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento de audio.
+                                </audio>
+                                <div class="track-list mt-3">
+                                    <div class="track active" data-track-src="{{ url_for('static', filename='audio/The Eye of the Needle.mp3') }}">
+                                        <span class="track-number">1</span>
+                                        <span class="track-title">The Eye of the Needle</span>
+                                        <span class="track-duration">4:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=RByDoYQpFa8" class="btn btn-primary btn-block mt-3">Ver tráiler</a>
+                        <a href="https://store.steampowered.com/app/1989270/Slay_the_Princess__The_Pristine_Cut/" class="btn btn-outline-primary btn-block">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Script del reproductor -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.getElementById('gameSoundtrack');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Configuración inicial
+    audioPlayer.src = document.querySelector('.track.active').dataset.trackSrc;
+    
+    // Cambiar canción al hacer clic
+    tracks.forEach(track => {
+        track.addEventListener('click', function() {
+            // Remover clase active de todas las pistas
+            tracks.forEach(t => t.classList.remove('active'));
+            
+            // Añadir clase active a la pista seleccionada
+            this.classList.add('active');
+            
+            // Cambiar la fuente de audio
+            const newTrackSrc = this.dataset.trackSrc;
+            if (audioPlayer.src !== newTrackSrc) {
+                audioPlayer.src = newTrackSrc;
+                audioPlayer.currentTime = 0;
+            }
+            
+            // Reproducir automáticamente (con manejo de errores)
+            audioPlayer.play().catch(e => {
+                console.log("Error de reproducción:", e);
+                // Muestra un botón de play si falla la reproducción automática
+                const playBtn = document.createElement('button');
+                playBtn.className = 'btn btn-sm btn-primary mt-2';
+                playBtn.innerHTML = '<i class="fas fa-play"></i> Reproducir';
+                playBtn.onclick = () => audioPlayer.play();
+                this.appendChild(playBtn);
+            });
+        });
+    });
+    
+    // Manejar el fin de la reproducción
+    audioPlayer.addEventListener('ended', function() {
+        const currentActive = document.querySelector('.track.active');
+        const nextTrack = currentActive.nextElementSibling || tracks[0];
+        
+        currentActive.classList.remove('active');
+        nextTrack.classList.add('active');
+        audioPlayer.src = nextTrack.dataset.trackSrc;
+        audioPlayer.play();
+    });
+    
+    // Solución para políticas de autoplay (requiere interacción del usuario)
+    document.addEventListener('click', function initAudio() {
+        // Solo necesita ejecutarse una vez
+        document.removeEventListener('click', initAudio);
+        
+        // Precarga el audio
+        audioPlayer.volume = 0;
+        audioPlayer.play().then(() => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            audioPlayer.volume = 1;
+        }).catch(e => console.log("Precarga de audio:", e));
+    }, { once: true });
+});
+</script>
+
+{% endblock %}

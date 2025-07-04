@@ -4,7 +4,7 @@
 
 <!-- Banner del juego -->
 <header class="container-fluid p-0">
-    <img src="{{ url_for('static', filename='images/clair-obscur-banner.jpg') }}" class="img-fluid w-100" alt="Clair Obscur Expedition 33">
+    <img src="{{ url_for('static', filename='images/Clair_Obscur/banner.jpg') }}" class="img-fluid w-100" alt="Clair Obscur Expedition 33">
 </header>
 
 <!-- Contenido principal -->
@@ -13,7 +13,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4">Clair Obscur: Expedition 33</h1>
-            <p class="lead">Un RPG por turnos que reinventa el género con su innovador sistema de combate</p>
+            <p class="lead">Un RPG por turnos que reinventa el género con su innovador sistema de combate.</p>
             <hr class="my-4">
             <div class="d-flex align-items-center">
                 <span class="badge bg-purple me-2">RPG</span>
@@ -31,13 +31,15 @@
                 
                 <div class="review-section mb-5">
                     <h3>Una premisa fascinante</h3>
-                    <p>En un mundo donde la Pintora controla el destino de la humanidad a través de su arte, cada año marca un número en un mural que determina qué edad alcanzarán los habitantes. La Expedición 33 es la última esperanza para romper este ciclo opresivo.</p>
-                    <img src="{{ url_for('static', filename='images/clair-obscur-gameplay1.jpg') }}" class="img-fluid rounded my-3" alt="Gameplay 1">
+                    <p>En un mundo donde la Pintora controla el destino de la humanidad a través de su arte, cada año marca un número en un mural que determina 
+                        qué edad alcanzarán los habitantes. La Expedición 33 es la última esperanza para romper este ciclo opresivo.</p>
+                    <img src="{{ url_for('static', filename='images/Clair_Obscur/gameplay.jpg') }}" class="img-fluid rounded my-3" alt="Gameplay">
                 </div>
 
                 <div class="review-section mb-5">
                     <h3>Combate innovador</h3>
-                    <p>El sistema de combate mezcla lo mejor de los RPG tradicionales con mecánicas modernas. El "Rayo de Luz" añade un elemento de tiempo real que mantiene la tensión en cada encuentro.</p>
+                    <p>El sistema de combate mezcla lo mejor de los RPG tradicionales con mecánicas modernas. El "Rayo de Luz" añade un elemento de tiempo 
+                        real que mantiene la tensión en cada encuentro.</p>
                     <div class="game-features">
                         <div class="feature">
                             <i class="fas fa-bolt"></i>
@@ -53,9 +55,10 @@
                 </div>
 
                 <div class="review-section mb-5">
-                    <h3>Arte y banda sonora</h3>
-                    <p>El estilo artístico único combina elementos del art nouveau con diseños de personajes memorables. La banda sonora, compuesta por Olivier Derivière, eleva la experiencia a otro nivel con sus melodías emotivas y orquestaciones ricas.</p>
-                    <img src="{{ url_for('static', filename='images/clair-obscur-art.jpg') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
+                    <h3>Arte y Banda Sonora</h3>
+                    <p>El estilo artístico único combina elementos del art nouveau con diseños de personajes memorables. La banda sonora, compuesta por Olivier Derivière, 
+                        eleva la experiencia a otro nivel con sus melodías emotivas y orquestaciones ricas.</p>
+                    <img src="{{ url_for('static', filename='images/Clair_Obscur/art.jpg') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
                 </div>
 
                 <div class="pros-cons">
@@ -81,12 +84,12 @@
             <!-- Sidebar con información del juego -->
             <div class="col-md-4">
                 <div class="game-info-card">
-                    <img src="{{ url_for('static', filename='images/clair-obscur-cover.jpg') }}" class="img-fluid rounded-top" alt="Portada">
+                    <img src="{{ url_for('static', filename='images/Clair_Obscur/cover.jpg') }}" class="img-fluid rounded-top" alt="Portada">
                     <div class="game-info-body">
                         <h3>Información del Juego</h3>
                         <div class="info-item">
                             <span class="info-label">Desarrollador:</span>
-                            <span class="info-value">Sandfall Interactive</span>
+                            <span class="info-value">Maddy Makes Games Inc., Extremely OK Games, Ltd.</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Género:</span>
@@ -98,7 +101,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">Lanzamiento:</span>
-                            <span class="info-value">2025</span>
+                            <span class="info-value">2018</span>
                         </div>
                         <div class="rating">
                             <div class="stars">
@@ -108,13 +111,13 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <span class="score">4.5/5</span>
+                            <span class="score">5/5</span>
                         </div>
 
 <div class="soundtrack-player mt-4">
                             <h4><i class="fas fa-music"></i> Banda Sonora</h4>
                             <div class="player-container">
-                                <audio id="gameSoundtrack" controls>
+                                <audio id="gameSoundtrack" controls autoplay>
                                     <source src="{{ url_for('static', filename='audio/main-theme.mp3') }}" type="audio/mpeg">
                                     <source src="{{ url_for('static', filename='audio/main-theme.ogg') }}" type="audio/ogg">
                                     Tu navegador no soporta el elemento de audio.

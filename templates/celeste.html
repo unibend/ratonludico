@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Banner del juego -->
+<header class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/Celeste/banner.png') }}" class="img-fluid w-100" alt="Celeste">
+</header>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+    <!-- Encabezado -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Celeste</h1>
+            <p class="lead">Un plataformero con jugabilidad precisa y desafiante, combinando mecánicas 
+                  innovadoras de salto y dash con una narrativa profunda sobre salud mental y superación personal.</p>
+            <hr class="my-4">
+            <div class="d-flex align-items-center">
+                <span class="badge bg-purple me-2">Plataformas</span>
+                <span class="badge bg-purple me-2">Aventura</span>
+                <span class="badge bg-purple">Puzles</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de reseña -->
+    <article class="review-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="section-tittle">Reseña</h2>
+                
+                <div class="review-section mb-5">
+                    <h3>Un viaje desafiante y emotivo hacia la cima</h3>
+                    <p>Madeline, una joven con problemas de ansiedad y depresión, decide escalar la Montaña Celeste. En su ascenso, enfrenta obstáculos físicos y emocionales, 
+                        encontrando personajes que la ayudan a confrontar y aceptar sus miedos y debilidades.</p>
+                    <img src="{{ url_for('static', filename='images/Celeste/gameplay.png') }}" class="img-fluid rounded my-3" alt="Gameplay">
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Plataformas y presición</h3>
+                    <p>La mecánica central es el salto y el dash aéreo, que permite a Madeline impulsarse en cualquier dirección una vez por salto. 
+                        Esta habilidad es esencial para superar los complejos desafíos de plataformas y se recarga al tocar el suelo o ciertos objetos.</p>
+                    <div class="game-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Escalar paredes</h4>
+                            <p>Puedes trepar superficies durante un tiempo limitado, lo que añade verticalidad y estrategia a los niveles</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chess"></i>
+                            <h4>Recolectar fresas</h4>
+                            <p>Tienes objetos opcionales y niveles alternativos que aumentan la dificultad y la rejugabilidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Arte y banda sonora</h3>
+                    <p>Pixel art retro, colorido y detallado, con animaciones fluidas y escenarios que transmiten tanto belleza como hostilidad. 
+                        La estética refuerza el tono emocional y nostálgico del juego.<br><br>La música, compuesta por Lena Raine, utiliza leitmotivs que reflejan las emociones y la lucha interna de la protagonista, 
+                        Madeline, ayudando a transmitir la ansiedad, la superación y la profundidad emocional del juego.</p>
+                    <img src="{{ url_for('static', filename='images/Celeste/art.jpg') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Puntos fuertes</h4>
+                        <ul>
+                            <li>Jugabilidad desafiante, pero justa</li>
+                            <li>Narrativa profunda sobre salud mental y superación</li>
+                            <li>Opciones para ajustar la dificultad</li>
+                            <li>Banda sonora memorable y emotiva</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Puntos débiles</h4>
+                        <ul>
+                            <li>La historia principal es relativamente corta</li>
+                            <li>Algunos picos de dificultad pueden sentirse abruptos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar con información del juego -->
+            <div class="col-md-4">
+                <div class="game-info-card">
+                    <img src="{{ url_for('static', filename='images/Celeste/cover.jpg') }}" class="img-fluid rounded-top" alt="Portada">
+                    <div class="game-info-body">
+                        <h3>Información del Juego</h3>
+                        <div class="info-item">
+                            <span class="info-label">Desarrollador:</span>
+                            <span class="info-value">Maddy Makes Games Inc.</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Género:</span>
+                            <span class="info-value">Plataformas</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Plataformas:</span>
+                            <span class="info-value">PC, PS4, Switch, Xbox One</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lanzamiento:</span>
+                            <span class="info-value">2018</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="score">5/5</span>
+                        </div>
+
+<div class="soundtrack-player mt-4">
+                            <h4><i class="fas fa-music"></i> Banda Sonora</h4>
+                            <div class="player-container">
+                                <audio id="gameSoundtrack" controls autoplay>
+                                    <source src="{{ url_for('static', filename='audio/Resurrections.mp3') }}" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento de audio.
+                                </audio>
+                                <div class="track-list mt-3">
+                                    <div class="track active" data-track-src="{{ url_for('static', filename='audio/Resurrections.mp3') }}">
+                                        <span class="track-number">1</span>
+                                        <span class="track-title">Resurrections</span>
+                                        <span class="track-duration">9:38</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=70d9irlxiB4" class="btn btn-primary btn-block mt-3">Ver tráiler</a>
+                        <a href="https://store.steampowered.com/app/504230/Celeste/" class="btn btn-outline-primary btn-block">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Script del reproductor -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.getElementById('gameSoundtrack');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Configuración inicial
+    audioPlayer.src = document.querySelector('.track.active').dataset.trackSrc;
+    
+    // Cambiar canción al hacer clic
+    tracks.forEach(track => {
+        track.addEventListener('click', function() {
+            // Remover clase active de todas las pistas
+            tracks.forEach(t => t.classList.remove('active'));
+            
+            // Añadir clase active a la pista seleccionada
+            this.classList.add('active');
+            
+            // Cambiar la fuente de audio
+            const newTrackSrc = this.dataset.trackSrc;
+            if (audioPlayer.src !== newTrackSrc) {
+                audioPlayer.src = newTrackSrc;
+                audioPlayer.currentTime = 0;
+            }
+            
+            // Reproducir automáticamente (con manejo de errores)
+            audioPlayer.play().catch(e => {
+                console.log("Error de reproducción:", e);
+                // Muestra un botón de play si falla la reproducción automática
+                const playBtn = document.createElement('button');
+                playBtn.className = 'btn btn-sm btn-primary mt-2';
+                playBtn.innerHTML = '<i class="fas fa-play"></i> Reproducir';
+                playBtn.onclick = () => audioPlayer.play();
+                this.appendChild(playBtn);
+            });
+        });
+    });
+    
+    // Manejar el fin de la reproducción
+    audioPlayer.addEventListener('ended', function() {
+        const currentActive = document.querySelector('.track.active');
+        const nextTrack = currentActive.nextElementSibling || tracks[0];
+        
+        currentActive.classList.remove('active');
+        nextTrack.classList.add('active');
+        audioPlayer.src = nextTrack.dataset.trackSrc;
+        audioPlayer.play();
+    });
+    
+    // Solución para políticas de autoplay (requiere interacción del usuario)
+    document.addEventListener('click', function initAudio() {
+        // Solo necesita ejecutarse una vez
+        document.removeEventListener('click', initAudio);
+        
+        // Precarga el audio
+        audioPlayer.volume = 0;
+        audioPlayer.play().then(() => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            audioPlayer.volume = 1;
+        }).catch(e => console.log("Precarga de audio:", e));
+    }, { once: true });
+});
+</script>
+
+{% endblock %}

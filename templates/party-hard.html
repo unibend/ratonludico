@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Banner del juego -->
+<header class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/Party_Hard/banner.jpg') }}" class="img-fluid w-100" alt="PArty_Hard">
+</header>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+    <!-- Encabezado -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Party Hard</h1>
+            <p class="lead">Un juego de acción y sigilo donde debes eliminar silenciosamente a todos en fiestas ruidosas, usando trampas y 
+                estrategias para no ser atrapado.</p>
+            <hr class="my-4">
+            <div class="d-flex align-items-center">
+                <span class="badge bg-purple me-2">Acción</span>
+                <span class="badge bg-purple me-2">Sigilo</span>
+                <span class="badge bg-purple">Estrategia</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de reseña -->
+    <article class="review-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="section-tittle">Reseña</h2>
+                
+                <div class="review-section mb-5">
+                    <h3>Estrategia macabra y sigilo en una fiesta mortal</h3>
+                    <p>Cansado de las fiestas ruidosas, controlas a un asesino que debe acabar con todos los invitados de la fiesta sin ser detectado. 
+                        Cada nivel ofrece múltiples formas creativas de eliminar a las víctimas, combinando sigilo, trampas y acción en escenarios variados y semialeatorios.</p>
+                  <img src="{{ url_for('static', filename='images/Party_Hard/gameplay.jpg') }}" class="img-fluid rounded my-3 d-block mx-auto" alt="Gameplay">
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Eliminación estratégica</h3>
+                    <p>El jugador debe evitar ser visto mientras elimina a los invitados usando cuchillos, trampas o el entorno. 
+                        La clave está en planificar ataques silenciosos y aprovechar elementos del escenario para causar caos sin levantar sospechas.</p>
+                    <div class="game-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Trampas</h4>
+                            <p>Usa objetos del escenario para eliminar enemigos de forma indirecta</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chess"></i>
+                            <h4>Camuflaje y distracción</h4>
+                            <p>Moverse entre los invitados y usar elementos del entorno para pasar desapercibido y evitar alertar a la policía</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-section mb-5">
+                    <h3>Arte y banda sonora</h3>
+                    <p>Party Hard presenta un estilo pixel art con estética oscura y macabra que combina humor negro con violencia gráfica. 
+                        Los escenarios están llenos de detalles y tene una estética retro y waporwave. 
+                        La banda sonora recuerda a los 80's sin dejar de ser tensa, con temas que aumentan la sensación de urgencia y suspenso durante la partida, complementando 
+                        la atmósfera de caos y sigilo en las fiestas. Los efectos sonoros enfatizan los momentos de acción y las reacciones de los personajes, 
+                        reforzando la inmersión en esta experiencia divertidamente retorcida.</p>
+                    <img src="{{ url_for('static', filename='images/Party_Hard/art.png') }}" class="img-fluid rounded my-3" alt="Arte conceptual">
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Puntos fuertes</h4>
+                        <ul>
+                            <li>Humor negro y atmósfera única</li>
+                            <li>Controles simples pero efectivos</li>
+                            <li>Alta rejugabilidad</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Puntos débiles</h4>
+                        <ul>
+                            <li>Puede volverse repetitivo tras varias partidas</li>
+                            <li>Algunos niveles pueden frustrar por la dificultad o aleatoriedad</li>
+                            <li>Historia poco desarrollada y narrativa limitada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar con información del juego -->
+            <div class="col-md-4">
+                <div class="game-info-card">
+                    <img src="{{ url_for('static', filename='images/Party_Hard/cover.png') }}" class="img-fluid rounded-top" alt="Portada">
+                    <div class="game-info-body">
+                        <h3>Información del Juego</h3>
+                        <div class="info-item">
+                            <span class="info-label">Desarrollador:</span>
+                            <span class="info-value">Pinokl Games</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Género:</span>
+                            <span class="info-value">Acción</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Plataformas:</span>
+                            <span class="info-value">PC, PS4, Switch, Xbox One</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lanzamiento:</span>
+                            <span class="info-value">2015</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="score">3.5/5</span>
+                        </div>
+
+<div class="soundtrack-player mt-4">
+                            <h4><i class="fas fa-music"></i> Banda Sonora</h4>
+                            <div class="player-container">
+                                <audio id="gameSoundtrack" controls autoplay>
+                                    <source src="{{ url_for('static', filename='audio/My Future Broken Heart.mp3') }}" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento de audio.
+                                </audio>
+                                <div class="track-list mt-3">
+                                    <div class="track active" data-track-src="{{ url_for('static', filename='audio/My Future Broken Heart.mp3') }}">
+                                        <span class="track-number">1</span>
+                                        <span class="track-title">My Future Broken Heart</span>
+                                        <span class="track-duration">4:49</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=Kswq0gX49WY" class="btn btn-primary btn-block mt-3">Ver tráiler</a>
+                        <a href="https://store.steampowered.com/app/356570/Party_Hard/" class="btn btn-outline-primary btn-block">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Script del reproductor -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.getElementById('gameSoundtrack');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Configuración inicial
+    audioPlayer.src = document.querySelector('.track.active').dataset.trackSrc;
+    
+    // Cambiar canción al hacer clic
+    tracks.forEach(track => {
+        track.addEventListener('click', function() {
+            // Remover clase active de todas las pistas
+            tracks.forEach(t => t.classList.remove('active'));
+            
+            // Añadir clase active a la pista seleccionada
+            this.classList.add('active');
+            
+            // Cambiar la fuente de audio
+            const newTrackSrc = this.dataset.trackSrc;
+            if (audioPlayer.src !== newTrackSrc) {
+                audioPlayer.src = newTrackSrc;
+                audioPlayer.currentTime = 0;
+            }
+            
+            // Reproducir automáticamente (con manejo de errores)
+            audioPlayer.play().catch(e => {
+                console.log("Error de reproducción:", e);
+                // Muestra un botón de play si falla la reproducción automática
+                const playBtn = document.createElement('button');
+                playBtn.className = 'btn btn-sm btn-primary mt-2';
+                playBtn.innerHTML = '<i class="fas fa-play"></i> Reproducir';
+                playBtn.onclick = () => audioPlayer.play();
+                this.appendChild(playBtn);
+            });
+        });
+    });
+    
+    // Manejar el fin de la reproducción
+    audioPlayer.addEventListener('ended', function() {
+        const currentActive = document.querySelector('.track.active');
+        const nextTrack = currentActive.nextElementSibling || tracks[0];
+        
+        currentActive.classList.remove('active');
+        nextTrack.classList.add('active');
+        audioPlayer.src = nextTrack.dataset.trackSrc;
+        audioPlayer.play();
+    });
+    
+    // Solución para políticas de autoplay (requiere interacción del usuario)
+    document.addEventListener('click', function initAudio() {
+        // Solo necesita ejecutarse una vez
+        document.removeEventListener('click', initAudio);
+        
+        // Precarga el audio
+        audioPlayer.volume = 0;
+        audioPlayer.play().then(() => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            audioPlayer.volume = 1;
+        }).catch(e => console.log("Precarga de audio:", e));
+    }, { once: true });
+});
+</script>
+
+{% endblock %}

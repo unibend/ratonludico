@@ -1,3 +1,11 @@
+#Proyecto "Ratón Lúdico" | Desarrollado por
+
+#Equipo "Tecno Gatitas":
+#Fabiana Rodríguez | CI: 30718413 | Sección 8A
+#Yeismar Ruíz | CI: 31068292 | Sección 8A
+#Samuel Jiménez | CI: 31192094 | Sección 8A
+#Miguel Solorzano | CI: 31962184 | Sección 8B
+
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -63,6 +71,30 @@ def delete(id):
 @app.route('/clair-obscur')
 def clair_obscur():
     return render_template('clair-obscur.html')
+
+@app.route('/celeste')
+def celeste():
+    return render_template('celeste.html')
+
+@app.route('/oneshot')
+def oneshot():
+    return render_template('oneshot.html')
+
+@app.route('/party-hard')
+def party_hard():
+    return render_template('party-hard.html')
+
+@app.route('/mad-father')
+def mad_father():
+    return render_template('mad-father.html')
+
+@app.route('/cry-of-fear')
+def cry_of_fear():
+    return render_template('cry-of-fear.html')
+
+@app.route('/slay-the-princess')
+def slay_the_princess():
+    return render_template('slay-the-princess.html')
 
 @app.route('/credits')
 def credits():

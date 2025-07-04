@@ -22,57 +22,75 @@
         </div>
         
         <!--Apartado de Resenas e Imagenes-->
-        <h1 class="section-tittle">Videojuegos de Aventura</h1>
-        <div class="card-group">
+
+        <h1 class="section-tittle">Últimos Lanzamientos</h1>
+          <div class="d-flex justify-content-center">
             <div class="card">
-              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/504230/capsule_616x353.jpg?t=1714089525" class="card-img-top" alt="GameCover">
-              <div class="card-body">
-                <h5 class="card-title">Celestle</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam sit quos.</p>
-                <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 3 minutos</small></p>
+              <img src="{{ url_for('static', filename='images/Clair_Obscur/card.jpg') }}" class="card-img-top" alt="GameCover">
+             <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('clair_obscur') }}'">
+                <h5 class="card-title">Clair Obscur: Expedition 33</h5>
+                <p class="card-text">Un RPG por turnos que reinventa el género con su innovador sistema de combate.</p>
+                <p class="card-text"><small class="text-muted" style="color :#ccc6c6 !important;"></small>Actualizado hace 11 minutos</small></p>
               </div>
             </div>
+          </div>
+
+        <h1 class="section-tittle">Acción y Aventura</h1>
+        <div class="card-group">
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/Celeste/card.jpg') }}" class="card-img-top" alt="GameCover">
+             <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('celeste') }}'">
+                <h5 class="card-title">Celeste</h5>
+                <p class="card-text">Un plataformero con jugabilidad precisa y desafiante, combinando mecánicas 
+                  innovadoras de salto y dash con una narrativa profunda sobre salud mental y superación personal.</p>
+                <p class="card-text"><small class="text-muted" style="color :#ccc6c6 !important;">Actualizado hace 40 minutos</small></p>
+              </div>
+          </div>
             <div class="card">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420530/capsule_616x353.jpg?t=1729475523" class="card-img-top" alt="GameCover">
-              <div class="card-body">
-                <h5 class="card-title">One Shot</h5>
-                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reprehenderit beatae exercitationem?</p>
+              <img src="{{ url_for('static', filename='images/OneShot/card.jpg') }}" class="card-img-top" alt="GameCover">
+             <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('oneshot') }}'">
+                <h5 class="card-title">OneShot</h5>
+                <p class="card-text">Una aventura narrativa que reinventa el género con su innovadora ruptura de la cuarta pared, integrando puzles que trascienden 
+                  la pantalla y una profunda conexión emocional con el jugador.</p>
                 <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 2 dias</small></p>
               </div>
             </div>
             <div class="card">
-              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/356570/capsule_616x353.jpg?t=1739395561" class="card-img-top" alt="GameCover">
-              <div class="card-body">
+              <img src="{{ url_for('static', filename='images/Party_Hard/card.jpg') }}" class="card-img-top" alt="GameCover">
+             <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('party_hard') }}'">
                 <h5 class="card-title">Party Hard</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae animi beatae!</p>
+                <p class="card-text">Un juego de acción y sigilo donde debes eliminar silenciosamente a todos en fiestas ruidosas, usando trampas y 
+                estrategias para no ser atrapado.<br><br></p>
                 <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 10 dias</small></p>
               </div>
             </div>
           </div>
 
-          <h1 class="section-tittle">Videojuegos de Terror</h1>
+          <h1 class="section-tittle">Horror y Suspenso</h1>
           <div class="card-group">
             <div class="card">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/483980/capsule_616x353.jpg?t=1735191803" class="card-img-top" alt="GameCover">
-              <div class="card-body">
+            <img src="{{ url_for('static', filename='images/Mad_Father/card.jpg') }}" class="card-img-top" alt="GameCover">
+            <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('mad_father') }}'">
                 <h5 class="card-title">Mad Father</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellat modi provident eaque? Ab perferendis excepturi rem deserunt.</p>
+                <p class="card-text">Survival horror RPG donde una niña de 11 años, explora la mansión de su padre para descubrir oscuros secretos y enfrentar horrores sobrenaturales.</p>
                 <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 1 día</small></p>
               </div>
             </div>
             <div class="card">
-              <img src="{{ url_for('static', filename='images/capsule_616x353.png') }}" class="card-img-top" alt="GameCover">
-              <div class="card-body">
+            <img src="{{ url_for('static', filename='images/Cry_Of_Fear/card.png') }}" class="card-img-top" alt="GameCover">
+            <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('cry_of_fear') }}'">
                 <h5 class="card-title">Cry of Fear</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi id facere officiis cum magni? Doloremque ratione dicta explicabo ut pariatur?</p>
+                <p class="card-text">Terror psicológico en primera persona donde el protagonista, enfrenta sus traumas y monstruos internos en una ciudad oscura, 
+                combinando supervivencia y combate tenso.</p>
                 <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 4 dias</small></p>
               </div>
             </div>
             <div class="card">
-              <img src="{{ url_for('static', filename='images/chNNMrc0bScjiatvH1m3t-DjVlbtNiW7.png') }}" class="card-img-top" alt="GameCover">
-              <div class="card-body">
+            <img src="{{ url_for('static', filename='images/Slay_The_Princess/card.png') }}" class="card-img-top" alt="GameCover">
+            <div class="card-body" style="cursor: pointer;" onclick="window.location.href='{{ url_for('slay_the_princess') }}'">
                 <h5 class="card-title">Slay The Princess | The Pristine Cut</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus odio ratione adipisci expedita architecto consectetur.</p>
+                <p class="card-text">Novela visual de terror psicológico donde debes decidir si matar o salvar a una princesa atrapada, 
+                enfrentando múltiples finales y dilemas morales.</p>
                 <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 15 dias</small></p>
               </div>
             </div>
