@@ -1,4 +1,4 @@
-// ===== THEME TOGGLE FUNCTIONALITY =====
+// ===== Selector de temas (theme toggle) =====
 
 class ThemeToggle {
     constructor() {
@@ -281,38 +281,125 @@ window.ThemeToggleUtils = {
     getTimeBasedTheme
 };
 
-// Controlador del reproductor de música
+class MusicPlayer {
+  constructor() {
+    this.audio = document.getElementById('gameSoundtrack');
+    this.tracks = document.querySelectorAll('.track');
+    this.playBtn = document.getElementById('playBtn');
+    this.pauseBtn = document.getElementById('pauseBtn');
+    this.volumeControl = document.getElementById('volumeControl');
+    this.currentTimeDisplay = document.getElementById('currentTime');
+    this.durationDisplay = document.getElementById('duration');
+    
+    this.init();
+  }
+  
+  init() {
+    // Configurar event listeners
+    this.setupEventListeners();
+    
+    // Actualizar controles iniciales
+    this.updateControls();
+    
+    // Configurar tema inicial
+    this.updateTheme();
+    
+    // Escuchar cambios de tema
+    document.addEventListener('themeChanged', () => this.updateTheme());
+  }
+  
+  setupEventListeners() {
+    // Control de pistas
+    this.tracks.forEach(track => {
+      track.addEventListener('click', () => this.playTrack(track));
+    });
+    
+    // Controles de reproducción
+    if (this.playBtn) {
+      this.playBtn.addEventListener('click', () => this.audio.play());
+    }
+    
+    if (this.pauseBtn) {
+      this.pauseBtn.addEventListener('click', () => this.audio.pause());
+    }
+    
+    // Control de volumen
+    if (this.volumeControl) {
+      this.volumeControl.addEventListener('input', () => {
+        this.audio.volume = this.volumeControl.value;
+      });
+    }
+    
+    // Actualizar tiempo de reproducción
+    this.audio.addEventListener('timeupdate', () => {
+      this.currentTimeDisplay.textContent = this.formatTime(this.audio.currentTime);
+    });
+    
+    // Actualizar duración cuando los metadatos estén cargados
+    this.audio.addEventListener('loadedmetadata', () => {
+      this.durationDisplay.textContent = this.formatTime(this.audio.duration);
+    });
+    
+    // Actualizar controles cuando cambia el estado de reproducción
+    this.audio.addEventListener('play', () => this.updateControls());
+    this.audio.addEventListener('pause', () => this.updateControls());
+    this.audio.addEventListener('ended', () => this.playNextTrack());
+  }
+  
+  playTrack(track) {
+    // Remover clase active de todas las pistas
+    this.tracks.forEach(t => t.classList.remove('active'));
+    
+    // Añadir clase active a la pista seleccionada
+    track.classList.add('active');
+    
+    // Aquí deberías cambiar la fuente de audio según la pista seleccionada
+    // this.audio.src = track.dataset.src;
+    
+    // Reproducir automáticamente
+    this.audio.play().catch(e => console.log('Autoplay prevented:', e));
+  }
+  
+  playNextTrack() {
+    const currentActive = document.querySelector('.track.active');
+    if (!currentActive) return;
+    
+    const nextTrack = currentActive.nextElementSibling || this.tracks[0];
+    this.playTrack(nextTrack);
+  }
+  
+  updateControls() {
+    if (!this.playBtn || !this.pauseBtn) return;
+    
+    if (this.audio.paused) {
+      this.playBtn.style.display = 'block';
+      this.pauseBtn.style.display = 'none';
+    } else {
+      this.playBtn.style.display = 'none';
+      this.pauseBtn.style.display = 'block';
+    }
+  }
+  
+  formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  }
+  
+  updateTheme() {
+    // Actualizar cualquier elemento específico del tema aquí
+    const player = document.querySelector('.music-player-container');
+    if (player) {
+      player.style.setProperty('background', 'var(--bg-card)');
+      player.style.setProperty('border-color', 'var(--border-color)');
+    }
+  }
+}
+
+// ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', function() {
-    const audioPlayer = document.getElementById('gameSoundtrack');
-    const tracks = document.querySelectorAll('.track');
-    
-    // Cambiar canción al hacer clic en la lista
-    tracks.forEach(track => {
-        track.addEventListener('click', function() {
-            // Remover clase active de todas las pistas
-            tracks.forEach(t => t.classList.remove('active'));
-            
-            // Añadir clase active a la pista seleccionada
-            this.classList.add('active');
-            
-            // Cambiar la fuente de audio (aquí deberías tener las diferentes pistas)
-            // audioPlayer.src = `ruta/a/la/cancion/${this.dataset.trackId}.mp3`;
-            
-            // Reproducir automáticamente
-            audioPlayer.play();
-        });
-    });
-    
-    // Actualizar la pista activa cuando termine la reproducción
-    audioPlayer.addEventListener('ended', function() {
-        const currentActive = document.querySelector('.track.active');
-        const nextTrack = currentActive.nextElementSibling || tracks[0];
-        
-        currentActive.classList.remove('active');
-        nextTrack.classList.add('active');
-        
-        // Aquí cambiarías a la siguiente canción si tuvieras múltiples archivos
-        // audioPlayer.src = `ruta/a/la/siguiente/cancion/${nextTrack.dataset.trackId}.mp3`;
-        // audioPlayer.play();
-    });
-});
+  // Inicializar reproductor de música si existe
+  if (document.getElementById('gameSoundtrack')) {
+    window.musicPlayer = new MusicPlayer();
+  }
+  });
