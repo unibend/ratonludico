@@ -40,24 +40,23 @@ python -m venv venv
 source venv/bin/activate # En Windows: venv\Scripts\activate
 
 3. **Instalar dependencias**
-Asegúrate de tener Flask instalado. Si tienes un `requirements.txt`, instala con: pip install -r requirements.txt
+  Asegúrate de tener Flask instalado. Si tienes un `requirements.txt`, instala con: pip install -r requirements.txt
 
 Si no, instala Flask directamente: pip install Flask
 
 4. **Ejecutar la aplicación**
-flask run
-O si tienes un archivo principal (`app.py` o similar): python app.py
+  Ejecuta el archivo index.py directamente con Python:python index.py
+  Esto iniciará el servidor Flask.
 
 5. **Abrir en el navegador**
-
-Ve a `http://127.0.0.1:5000` para ver la página en local.
+  Ve a `http://127.0.0.1:5000` para ver la página en local.
 
 ---
 
 ## Créditos
 
-- **Desarrollo y diseño:** [Tu Nombre o Nickname]
-- **Inspiración:** Comunidad de juegos indie y fans del terror psicológico.
+- **Desarrollo y diseño:** Fabiana Rodríguez, Miguel SOlorzano, Samuel Jiménez, Yeismar Ruíz
+- **Inspiración:** Comunidad de juegos indie y del terror psicológico.
 - **Imágenes y recursos:** Todas las imágenes y audios están alojados en la carpeta `static/` y son propiedad de sus respectivos creadores o están bajo licencias libres para uso educativo y de reseñas.
 - **Iconos:** Uso de [Font Awesome](https://fontawesome.com/) para iconografía.
 - **Framework:** Flask para backend y Jinja2 para plantillas.
