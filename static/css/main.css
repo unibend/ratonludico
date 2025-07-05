@@ -519,7 +519,7 @@ h1.section-tittle {
 }
 
 :root[data-theme="light"] .card-title {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .card-text {
