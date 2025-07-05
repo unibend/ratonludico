@@ -1,7 +1,5 @@
 # Proyecto Ratón Lúdico
 
-## Descripción
-
 **Ratón Lúdico** es un blog dedicado a las reseñas y noticias sobre juegos indie, con especial énfasis en géneros como los juegos de rol y el terror psicológico. Nuestro objetivo es explorar y destacar títulos independientes que ofrecen experiencias únicas y emocionantes, muchas veces pasados por alto en la industria principal. Si eres un apasionado de los juegos indie, este blog es tu espacio para descubrir y profundizar en ellos.
 
 ---
@@ -41,8 +39,7 @@ source venv/bin/activate # En Windows: venv\Scripts\activate
 
 3. **Instalar dependencias**
   Asegúrate de tener Flask instalado. Si tienes un `requirements.txt`, instala con: pip install -r requirements.txt
-
-Si no, instala Flask directamente: pip install Flask
+  Si no, instala Flask directamente: pip install Flask
 
 4. **Ejecutar la aplicación**
   Ejecuta el archivo index.py directamente con Python:python index.py
@@ -63,4 +60,4 @@ Si no, instala Flask directamente: pip install Flask
 
 ---
 
-¡Gracias por visitar y contribuir a Ratón Lúdico! 🎮🐭
+¡Gracias por visitar al Ratón Lúdico! 🎮🐭
