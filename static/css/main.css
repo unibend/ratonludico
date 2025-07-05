@@ -89,7 +89,7 @@ body {
   position: relative;
 }
 
-/* Fondo animado optimizado */
+/* Fondo animado */
 body::before {
   content: '';
   position: fixed;
@@ -641,7 +641,7 @@ h1.section-tittle {
 }
 
 .table tbody td {
-  color: var(--text-secondary);
+  color: var(--secondary-purple);
   padding: var(--spacing-md);
   border: none;
   vertical-align: middle;
