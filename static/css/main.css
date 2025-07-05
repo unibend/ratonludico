@@ -766,6 +766,28 @@ h1.section-tittle {
   font-size: 0.8rem;
 }
 
+/* Estilos para los nombres en las tarjetas de créditos */
+.credit-name-link {
+  color: var(--secondary-purple) !important;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.credit-name-link:hover {
+  color: var(--dark-purple) !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Asegurar que en modo claro también se vean bien */
+:root[data-theme="light"] .credit-name-link {
+  color: var(--secondary-purple) !important;
+}
+
+:root[data-theme="light"] .credit-name-link:hover {
+  color: var(--dark-purple) !important;
+}
+
 /* ===== PÁGINAS DE RESEÑA ===== */
 .review-content {
   background: var(--bg-card);
