@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=lCokGNs7CLa6&format=png&color=000000">
+    <title>Ratón Lúdico</title>
+    <!--Boostrap 4-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Boostrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Barra de Navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://img.icons8.com/?size=100&id=lCokGNs7CLa6&format=png&color=000000" 
+                alt="Imagen desde URL" width="50" height="45" class="d-inline-block align-text-top">
+            </a>
+            <a class="navbar-brand" href="index.html">Ratón Lúdico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="register.html">Registro</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="clair-obscur.html">Expedition 33</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="credits.html">Créditos</a>
+    </li>
+</ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="flex-grow-1">
+        <!--Banner-->
+        <header class="container-fluid p-0">
+            <img src="images/banner-extended.png" class="img-fluid w-100" alt="Banner">
+        </header>
+
+        <!-- Contenido principal -->
+        <div class="container">
+            <!--Apartado de Bienvenida-->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                <h1 class="display-4">¡Bienvenido a Ratón Lúdico!</h1>
+                <p class="lead">Aquí encontrarás reseñas y noticias sobre los mejores juegos indie. Nuestro objetivo es explorar 
+                  el mundo de los juegos independientes, destacando títulos que a menudo pasan desapercibidos pero que ofrecen experiencias 
+                  únicas y emocionantes. Si eres un fanático de los juegos de rol y del terror psicológico, estás en el lugar correcto. 
+                  ¡Explora con nosotros el fascinante universo de los juegos indie!</p>
+                <hr class="my-4">
+                </div>
+            </div>
+            
+            <!--Apartado de Resenas e Imagenes-->
+
+            <h1 class="section-tittle">Últimos Lanzamientos</h1>
+              <div class="d-flex justify-content-center">
+                <div class="card">
+                  <img src="images/Clair_Obscur/card.jpg" class="card-img-top" alt="GameCover">
+                  <div class="card-body" style="cursor: pointer;" onclick="window.location.href='clair-obscur.html'">
+                    <h5 class="card-title">Clair Obscur: Expedition 33</h5>
+                    <p class="card-text">Una carta de amor a los JRPG clásicos que reinventa el género con su innovador sistema de combate.</p>
+                    <p class="card-text"><small class="text-muted" style="color :#ccc6c6 !important;"></small>Actualizado hace 33 minutos</small></p>
+                  </div>
+                </div>
+              </div>
+
+            <h1 class="section-tittle">Acción y Aventura</h1>
+            <div class="card-group">
+              <div class="card">
+                <img src="images/Celeste/card.jpg" class="card-img-top" alt="GameCover">
+                  <div class="card-body" style="cursor: pointer;" onclick="window.location.href='celeste.html'">
+                    <h5 class="card-title">Celeste</h5>
+                    <p class="card-text">Un plataformero con jugabilidad precisa y desafiante, combinando mecánicas 
+                      innovadoras de salto y dash con una narrativa profunda sobre salud mental y superación personal.</p>
+                    <p class="card-text"><small class="text-muted" style="color :#ccc6c6 !important;">Actualizado hace 40 minutos</small></p>
+                  </div>
+              </div>
+                <div class="card">
+                  <img src="images/OneShot/card.jpg" class="card-img-top" alt="GameCover">
+                  <div class="card-body" style="cursor: pointer;" onclick="window.location.href='oneshot.html'">
+                    <h5 class="card-title">OneShot</h5>
+                    <p class="card-text">Una aventura narrativa que reinventa el género con su innovadora ruptura de la cuarta pared, integrando puzles que trascienden 
+                      la pantalla y una profunda conexión emocional con el jugador.</p>
+                    <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 2 dias</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/Party_Hard/card.jpg" class="card-img-top" alt="GameCover">
+                  <div class="card-body" style="cursor: pointer;" onclick="window.location.href='party-hard.html'">
+                    <h5 class="card-title">Party Hard</h5>
+                    <p class="card-text">Un juego de acción y sigilo donde debes eliminar silenciosamente a todos en fiestas ruidosas, usando trampas y 
+                    estrategias para no ser atrapado.<br><br></p>
+                    <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 10 dias</small></p>
+                  </div>
+                </div>
+              </div>
+
+              <h1 class="section-tittle">Horror y Suspenso</h1>
+              <div class="card-group">
+                <div class="card">
+                <img src="images/Mad_Father/card.jpg" class="card-img-top" alt="GameCover">
+                <div class="card-body" style="cursor: pointer;" onclick="window.location.href='mad-father.html'">
+                    <h5 class="card-title">Mad Father</h5>
+                    <p class="card-text">Survival horror RPG donde una niña de 11 años, explora la mansión de su padre para descubrir oscuros secretos y enfrentar horrores sobrenaturales.</p>
+                    <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 1 día</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                <img src="images/Cry_Of_Fear/card.png" class="card-img-top" alt="GameCover">
+                <div class="card-body" style="cursor: pointer;" onclick="window.location.href='cry-of-fear.html'">
+                    <h5 class="card-title">Cry of Fear</h5>
+                    <p class="card-text">Terror psicológico en primera persona donde el protagonista, enfrenta sus traumas y monstruos internos en una ciudad oscura, 
+                    combinando supervivencia y combate tenso.</p>
+                    <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 4 dias</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                <img src="images/Slay_The_Princess/card.png" class="card-img-top" alt="GameCover">
+                <div class="card-body" style="cursor: pointer;" onclick="window.location.href='slay-the-princess.html'">
+                    <h5 class="card-title">Slay The Princess | The Pristine Cut</h5>
+                    <p class="card-text">Novela visual de terror psicológico donde debes decidir si matar o salvar a una princesa atrapada, 
+                    enfrentando múltiples finales y dilemas morales.</p>
+                    <p class="card-text"><small class="text-muted" style="color: #ccc6c6 !important;">Actualizado hace 15 dias</small></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    
+    <!-- Script del toggle de tema -->
+    <script src="js/theme_toggle_js.js"></script>
+
+    <footer class="py-3 my-4">
+        <div class="container text-center">
+        <span class="text-muted">© 2025 Ratón Lúdico. Proyecto de Programación II (M1)</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
