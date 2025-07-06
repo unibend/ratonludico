@@ -76,6 +76,7 @@ const UserManager = {
   
   // Add new user
   async addUser(nombre, correo) {
+    console.log('Starting addUser operation with:', { nombre, correo });
     const loadingEl = document.getElementById('loading');
     const errorEl = document.getElementById('error-message') || document.getElementById('errorAlert');
     const errorText = document.getElementById('error-text') || document.getElementById('errorList');
@@ -87,10 +88,12 @@ const UserManager = {
     if (successEl) successEl.style.display = 'none';
     
     try {
-      await addDoc(collection(db, 'users'), {
+      console.log('Attempting to add document to Firebase...');
+      const docRef = await addDoc(collection(db, 'users'), {
         nombre: nombre,
         correo: correo
       });
+      console.log('Document added successfully with ID:', docRef.id);
       
       if (successEl && successText) {
         successText.textContent = 'Usuario agregado exitosamente.';
@@ -105,13 +108,15 @@ const UserManager = {
       
       // Redirect to register page after successful add
       setTimeout(() => {
+        console.log('Redirecting to register page...');
         window.location.href = 'register';
       }, 1500);
       
     } catch (error) {
       console.error('Error adding user:', error);
+      console.error('Error details:', error.message, error.code);
       if (errorEl && errorText) {
-        errorText.textContent = 'Error agregando usuario. Intenta nuevamente.';
+        errorText.textContent = `Error agregando usuario: ${error.message}. Intenta nuevamente.`;
         errorEl.style.display = 'block';
       }
     } finally {
