@@ -76,7 +76,6 @@ const UserManager = {
   
   // Add new user
   async addUser(nombre, correo) {
-    console.log('Starting addUser operation with:', { nombre, correo });
     const loadingEl = document.getElementById('loading');
     const errorEl = document.getElementById('error-message') || document.getElementById('errorAlert');
     const errorText = document.getElementById('error-text') || document.getElementById('errorList');
@@ -88,12 +87,10 @@ const UserManager = {
     if (successEl) successEl.style.display = 'none';
     
     try {
-      console.log('Attempting to add document to Firebase...');
-      const docRef = await addDoc(collection(db, 'users'), {
+      await addDoc(collection(db, 'users'), {
         nombre: nombre,
         correo: correo
       });
-      console.log('Document added successfully with ID:', docRef.id);
       
       if (successEl && successText) {
         successText.textContent = 'Usuario agregado exitosamente.';
@@ -108,15 +105,13 @@ const UserManager = {
       
       // Redirect to register page after successful add
       setTimeout(() => {
-        console.log('Redirecting to register page...');
         window.location.href = 'register';
       }, 1500);
       
     } catch (error) {
       console.error('Error adding user:', error);
-      console.error('Error details:', error.message, error.code);
       if (errorEl && errorText) {
-        errorText.textContent = `Error agregando usuario: ${error.message}. Intenta nuevamente.`;
+        errorText.textContent = 'Error agregando usuario. Intenta nuevamente.';
         errorEl.style.display = 'block';
       }
     } finally {
@@ -279,6 +274,13 @@ function getCurrentPageName() {
   return currentPage.replace('.html', '');
 }
 
+// Helper function to check if current page matches a given page name
+function isCurrentPage(pageName) {
+  const currentPage = window.location.pathname.split('/').pop();
+  // Check both with and without .html extension
+  return currentPage === pageName || currentPage === pageName + '.html';
+}
+
 // Initialize based on current page
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, initializing Firebase manager...');
@@ -286,11 +288,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentPage = getCurrentPageName();
   console.log('Current page:', currentPage);
   
-  if (currentPage === 'register') {
+  if (isCurrentPage('register')) {
     console.log('Loading users for register page...');
     // Load users when on register page
     UserManager.loadUsers();
-  } else if (currentPage === 'form') {
+  } else if (isCurrentPage('form')) {
     console.log('Initializing form page...');
     // Handle form page logic
     const userId = getUrlParameter('id');
