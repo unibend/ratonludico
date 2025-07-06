@@ -52,7 +52,7 @@ source venv/bin/activate # En Windows: venv\Scripts\activate
 
 ## Créditos
 
-- **Desarrollo y diseño:** Fabiana Rodríguez, Miguel SOlorzano, Samuel Jiménez, Yeismar Ruíz
+- **Desarrollo y diseño:** Fabiana Rodríguez, Miguel Solorzano, Samuel Jiménez, Yeismar Ruíz
 - **Inspiración:** Comunidad de juegos indie y del terror psicológico.
 - **Imágenes y recursos:** Todas las imágenes y audios están alojados en la carpeta `static/` y son propiedad de sus respectivos creadores o están bajo licencias libres para uso educativo y de reseñas.
 - **Iconos:** Uso de [Font Awesome](https://fontawesome.com/) para iconografía.
