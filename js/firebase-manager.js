@@ -267,18 +267,25 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+// Helper function to get current page name (handles both with and without .html extension)
+function getCurrentPageName() {
+  const currentPage = window.location.pathname.split('/').pop();
+  // Remove .html extension if present, or return as-is if not
+  return currentPage.replace('.html', '');
+}
+
 // Initialize based on current page
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, initializing Firebase manager...');
   
-  const currentPage = window.location.pathname.split('/').pop();
+  const currentPage = getCurrentPageName();
   console.log('Current page:', currentPage);
   
-  if (currentPage === 'register.html') {
+  if (currentPage === 'register') {
     console.log('Loading users for register page...');
     // Load users when on register page
     UserManager.loadUsers();
-  } else if (currentPage === 'form.html') {
+  } else if (currentPage === 'form') {
     console.log('Initializing form page...');
     // Handle form page logic
     const userId = getUrlParameter('id');
