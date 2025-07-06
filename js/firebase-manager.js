@@ -105,7 +105,7 @@ const UserManager = {
       
       // Redirect to register page after successful add
       setTimeout(() => {
-        window.location.href = 'register.html';
+        window.location.href = 'register';
       }, 1500);
       
     } catch (error) {
@@ -165,7 +165,7 @@ const UserManager = {
       
       // Redirect to register page after successful update
       setTimeout(() => {
-        window.location.href = 'register.html';
+        window.location.href = 'register';
       }, 1500);
       
     } catch (error) {
