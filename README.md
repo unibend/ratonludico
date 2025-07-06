@@ -8,11 +8,11 @@
 
 El diseño de Ratón Lúdico está inspirado en una estética moderna y elegante con predominancia de tonos púrpuras y un modo oscuro por defecto, que brinda una experiencia visual cómoda y envolvente para los usuarios. 
 
-- Uso de gradientes suaves y sombras para dar profundidad.
-- Animaciones sutiles para mejorar la interacción y dinamismo.
-- Diseño responsivo para una correcta visualización en dispositivos móviles y de escritorio.
-- Integración de un reproductor de música para ambientar la experiencia en las páginas de reseñas.
-- Navegación clara y accesible con un toggle para cambiar entre modo oscuro y claro.
+- **Uso de gradientes suaves y sombras** para dar profundidad.
+- **Animaciones sutiles** para mejorar la interacción y dinamismo.
+- **Diseño responsivo** para una correcta visualización en dispositivos móviles y de escritorio.
+- **Integración de un reproductor de música** para ambientar la experiencia en las páginas de reseñas.
+- **Navegación clara y accesible** con un toggle para cambiar entre modo oscuro y claro.
 
 ---
 
@@ -21,7 +21,6 @@ El diseño de Ratón Lúdico está inspirado en una estética moderna y elegante
 - **HTML** con plantillas Jinja2 (Flask) para la generación dinámica de contenido.
 - **CSS** moderno con variables CSS para temas claros y oscuros, animaciones y diseño responsivo.
 - **JavaScript** para funcionalidades interactivas, como el reproductor de música.
-- **Python (Flask)** para el backend y manejo de rutas (implícito por el uso de `url_for` en las plantillas).
 
 ---
 
@@ -29,23 +28,9 @@ El diseño de Ratón Lúdico está inspirado en una estética moderna y elegante
 
 Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-1. **Clonar el repositorio**
-git clone https://github.com/lunahkq/ratonludico.git
-cd raton-ludico
-
-2. **Crear y activar un entorno virtual (opcional pero recomendado)**
-python -m venv venv
-source venv/bin/activate # En Windows: venv\Scripts\activate
-
-3. **Instalar dependencias**
-  Asegúrate de tener Flask instalado. Instala Flask directamente: pip install Flask
-
-4. **Ejecutar la aplicación**
-  Ejecuta el archivo index.py directamente con Python:python index.py
-  Esto iniciará el servidor Flask.
-
-5. **Abrir en el navegador**
-  Ve a `http://127.0.0.1:5000` para ver la página en local.
+1. Descargar el archivo zip de este repositorio
+2. Abrir la terminal y navegar a la carpeta principal del proyecto
+3. Ejecutar el comando `python -m http.server`
 
 ---
 
@@ -53,9 +38,9 @@ source venv/bin/activate # En Windows: venv\Scripts\activate
 
 - **Desarrollo y diseño:** Fabiana Rodríguez, Miguel Solorzano, Samuel Jiménez, Yeismar Ruíz
 - **Inspiración:** Comunidad de juegos indie y del terror psicológico.
-- **Imágenes y recursos:** Todas las imágenes y audios están alojados en la carpeta `static/` y son propiedad de sus respectivos creadores o están bajo licencias libres para uso educativo y de reseñas.
+- **Imágenes y recursos:** Todas las imágenes y audios son propiedad de sus respectivos creadores o están bajo licencias libres para uso educativo y de reseñas.
 - **Iconos:** Uso de [Font Awesome](https://fontawesome.com/) para iconografía.
-- **Framework:** Flask para backend y Jinja2 para plantillas.
+- **Framework:** Jinja2 para plantillas.
 
 ---
 
