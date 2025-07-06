@@ -38,8 +38,7 @@ python -m venv venv
 source venv/bin/activate # En Windows: venv\Scripts\activate
 
 3. **Instalar dependencias**
-  Asegúrate de tener Flask instalado. Si tienes un `requirements.txt`, instala con: pip install -r requirements.txt
-  Si no, instala Flask directamente: pip install Flask
+  Asegúrate de tener Flask instalado. Instala Flask directamente: pip install Flask
 
 4. **Ejecutar la aplicación**
   Ejecuta el archivo index.py directamente con Python:python index.py
